@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-TEXTFILE="${1:-/usr/share/grok-cli/racerrr.txt}"
-ART1="${2:-/usr/share/grok-cli/art1.txt}"
-ART2="${3:-/usr/share/grok-cli/art2.txt}"
+TEXTFILE="${1:-racerrr.txt}"
+ART1="${2:-art1.txt}"
+ART2="${3:-art2.txt}"
 
 if [[ ! -f "$TEXTFILE" ]]; then
   echo "Text file '$TEXTFILE' not found" >&2
