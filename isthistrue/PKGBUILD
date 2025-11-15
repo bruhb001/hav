@@ -1,0 +1,25 @@
+# Maintainer: Jane <bruhalt@gmail.com>
+
+pkgname=grokisthistrue
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Verify anything via Grok"
+arch=('any')
+url="https://grokipedia.com"
+license=('MIT')
+depends=()
+source=('grok.sh'
+        'racerrr.txt'
+        'art1.txt'
+        'art2.txt')
+md5sums=('SKIP'
+         'SKIP'
+         'SKIP'
+         'SKIP')
+
+package() {
+  install -Dm755 "$srcdir/grok.sh" "$pkgdir/usr/bin/grok"
+  install -Dm644 "$srcdir/racerrr.txt" "$pkgdir/usr/share/grok-cli/racerrr.txt"
+  install -Dm644 "$srcdir/art1.txt" "$pkgdir/usr/share/grok-cli/art1.txt"
+  install -Dm644 "$srcdir/art2.txt" "$pkgdir/usr/share/grok-cli/art2.txt"
+}
